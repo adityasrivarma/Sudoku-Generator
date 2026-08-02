@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku Puzzle Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="game-panel" aria-labelledby="app-title">
+      <div class="topbar">
+        <div>
+          <p class="eyebrow">Sudoku</p>
+          <h1 id="app-title">Puzzle Generator</h1>
+        </div>
+        <label class="difficulty-control" for="difficulty">
+          <span>Difficulty</span>
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="sudoku-board" class="sudoku-board" aria-label="9 by 9 Sudoku board"></div>
+
+      <div class="controls" aria-label="Game controls">
+        <button id="new-game" type="button">New Game</button>
+        <button id="check-solution" type="button">Check Solution</button>
+        <button id="reset-game" type="button">Reset</button>
+      </div>
+
+      <p id="message" class="message" role="status" aria-live="polite">Choose a cell and fill in numbers 1-9.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
